@@ -1,0 +1,18 @@
+2020-06-09 19:49:41,731 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2020-06-09 19:51:13,269 [Worker-8: Periodic workspace save.] ERROR o.e.m.c.i.p.r.ProjectRegistryReader - Can't write workspace state
+java.io.FileNotFoundException: /home/joseiba/eclipse-workspace/back-end/.metadata/.plugins/org.eclipse.m2e.core/workspaceState.ser (No existe el archivo o el directorio)
+	at java.io.FileOutputStream.open0(Native Method) ~[na:1.8.0_252]
+	at java.io.FileOutputStream.open(FileOutputStream.java:270) ~[na:1.8.0_252]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:213) ~[na:1.8.0_252]
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:162) ~[na:1.8.0_252]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryReader.writeWorkspaceState(ProjectRegistryReader.java:128) ~[org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.project.registry.ProjectRegistryManager.writeWorkspaceState(ProjectRegistryManager.java:990) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.m2e.core.internal.MavenPluginActivator$1.saving(MavenPluginActivator.java:147) [org.eclipse.m2e.core_1.14.0.20191209-1925.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.executeLifecycle(SaveManager.java:387) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager$1.run(SaveManager.java:204) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45) [org.eclipse.equinox.common_3.10.600.v20191004-1420.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.broadcastLifecycle(SaveManager.java:207) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1164) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.SaveManager.save(SaveManager.java:1143) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.resources.DelayedSnapshotJob.run(DelayedSnapshotJob.java:55) [org.eclipse.core.resources_3.13.600.v20191122-2104.jar:na]
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63) [org.eclipse.core.jobs_3.10.600.v20191122-2104.jar:na]
