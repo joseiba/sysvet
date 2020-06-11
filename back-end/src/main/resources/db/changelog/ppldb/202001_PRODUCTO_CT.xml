@@ -1,0 +1,21 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+                   
+	<changeSet id="ppl_producto_ct_001" author="Jose Ibañez">
+		<createTable tableName="deposito" schemaName="data">
+		
+			<column name="id_deposito" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+			
+			<column name="descripcion" type="VARCHAR" >
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+		
+		
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
