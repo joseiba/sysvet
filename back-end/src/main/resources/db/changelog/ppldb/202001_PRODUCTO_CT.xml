@@ -11,7 +11,7 @@
 			</column>
 			
 			<column name="descripcion" type="VARCHAR" >
-				<constraints nullable="false" primaryKey="true"/>
+				<constraints nullable="false"/>
 			</column>
 		
 		
