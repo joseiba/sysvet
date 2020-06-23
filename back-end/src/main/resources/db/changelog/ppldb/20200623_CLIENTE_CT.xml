@@ -1,0 +1,47 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet id="ppl_cliente_ct_001" author="Monica Espinola">
+		<createTable tableName="cliente" schemaName="data">
+
+			<column name="id_cliente" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+
+			<column name="nombre_cliente" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+      <column name="apellido_cliente" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+      <column name="ci_cliente" type="BIGINT" >
+				<constraints nullable="false"/>
+			</column>
+
+      <column name="direccion" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+      <column name="ruc" type="VARCHAR" >
+				<constraints nullable="true"/>
+			</column>
+
+      <column name="telefono" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+      <column name="email" type="VARCHAR" >
+				<constraints nullable="true"/>
+
+			</column><column name="ciudad" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
