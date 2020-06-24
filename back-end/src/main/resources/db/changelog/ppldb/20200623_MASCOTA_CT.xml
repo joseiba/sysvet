@@ -26,8 +26,8 @@
 				<constraints nullable="true"/>
 			</column>
 
-      <column name="imagen" type="BLOB" >
-				<constraints nullable="false"/>
+      <column name="imagen" type="VARCHAR" >
+				<constraints nullable="true"/>
 			</column>
 
       <column name="peso" type="BIGINT" >
