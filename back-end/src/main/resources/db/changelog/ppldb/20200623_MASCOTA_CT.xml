@@ -6,49 +6,55 @@
 	<changeSet id="ppl_mascota_ct_002" author="Monica Espinola">
 		<createTable tableName="mascota" schemaName="data">
 
-			<column name="id_mascota" type="BIGINT" autoIncrement="true">
-				<constraints nullable="false" primaryKey="true"/>
-			</column>
+		<column name="id_mascota" type="BIGINT" autoIncrement="true">
+			<constraints nullable="false" primaryKey="true"/>
+		</column>
 
-			<column name="nombre_mascota" type="VARCHAR" >
-				<constraints nullable="false"/>
-			</column>
+		<column name="nombre_mascota" type="VARCHAR" >
+			<constraints nullable="false"/>
+		</column>
 
-      <column name="tatuaje" type="VARCHAR" >
-				<constraints nullable="true"/>
-			</column>
+		<column name="tatuaje" type="VARCHAR" >
+			<constraints nullable="true"/>
+		</column>
+		
+		<column name="sexo" type="VARCHAR" >
+			<constraints nullable="false"/>
+		</column>
+		
+		<column name="edad" type="BIGINT" >
+			<constraints nullable="true"/>
+		</column>
+		
+		<column name="imagen" type="VARCHAR" >
+			<constraints nullable="true"/>
+		</column>
+		
+		<column name="peso" type="BIGINT" >
+			<constraints nullable="false"/>
+		</column>
+		
+		<column name="fecha_nacimiento" type="DATE" >
+			<constraints nullable="true"/>
+		</column>
+		
+		<column name="color_pelaje" type="VARCHAR" >
+			<constraints nullable="false"/>
+		</column>
+		
+		<column name="especie" type="VARCHAR" >
+			<constraints nullable="false"/>
+		</column>
+		
+	    <column name="raza" type="VARCHAR" >
+			<constraints nullable="false"/>
+		</column>
 
-      <column name="sexo" type="VARCHAR" >
-				<constraints nullable="false"/>
-			</column>
-
-      <column name="edad" type="BIGINT" >
-				<constraints nullable="true"/>
-			</column>
-
-      <column name="imagen" type="VARCHAR" >
-				<constraints nullable="true"/>
-			</column>
-
-      <column name="peso" type="BIGINT" >
-				<constraints nullable="false"/>
-			</column>
-
-      <column name="fecha_nacimiento" type="DATE" >
-				<constraints nullable="true"/>
-			</column>
-
-      <column name="color_pelaje" type="VARCHAR" >
-				<constraints nullable="false"/>
-			</column>
-
-      <column name="especie" type="VARCHAR" >
-				<constraints nullable="false"/>
-			</column>
-
-      <column name="raza" type="VARCHAR" >
-				<constraints nullable="false"/>
-			</column>
+		<column name="id_cliente" type="BIGINT">
+                  <constraints nullable="false" 
+                  foreignKeyName="fk_cliente"
+                  references="data.cliente(id_cliente)"/>
+        </column>
 
 		</createTable>
 	</changeSet>

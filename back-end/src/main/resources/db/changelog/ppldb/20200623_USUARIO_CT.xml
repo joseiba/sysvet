@@ -1,0 +1,45 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet id="ppl_usuario_ct_004" author="Jose Ibañez">
+		<createTable tableName="usuario" schemaName="data">  
+		
+			<column name="id_usuario" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+
+			<column name="nombre" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+			<column name="apellido" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="email" type="BIGINT" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="contrasenha" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="rol" type="VARCHAR" >
+				<constraints nullable="true"/>
+			</column>
+			
+			<column name="active" type="BOOLEAN" defaultValue="True" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="numero_celular" type="VARCHAR" >
+				<constraints nullable="true"/>
+			</column>
+			    
+
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
