@@ -1,0 +1,39 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet id="ppl_producto_ct_005" author="Jose Ibañez">
+		<createTable tableName="producto" schemaName="data">  
+		
+			<column name="id_producto" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+
+			<column name="nombre_producto" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+			<column name="descripcion" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="fecha_vencimiento" type="DATE" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="stock" type="BIGINT" >
+				<constraints nullable="false"/>
+			</column>
+			
+			<column name="id_tipo_producto" type="BIGINT">
+                    <constraints nullable="false" 
+                    foreignKeyName="fk_tipo_producto"
+                    references="data.tipo_producto(id_tipo_producto)"/>
+            </column>
+			    
+
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
