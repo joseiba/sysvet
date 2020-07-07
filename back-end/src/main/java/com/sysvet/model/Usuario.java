@@ -107,7 +107,4 @@ public class Usuario implements Serializable {
 		this.numeroCelular = numeroCelular;
 	}
 	
-	
-	
-	
 }
