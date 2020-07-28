@@ -38,6 +38,8 @@ public class Cliente implements Serializable{
 	@Column(name = "apellido_cliente")
 	private String ciudad;
 	
+	public Cliente() {}
+	
 	// metodo que regresa un tipo de cliente
 	public Cliente(Long cedula, String nombre_cliente, String apellido_cliente) {
 		this.cedula = cedula;
