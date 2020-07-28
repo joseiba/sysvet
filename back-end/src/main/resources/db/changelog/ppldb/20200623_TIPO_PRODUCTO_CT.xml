@@ -1,0 +1,28 @@
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+                   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                   xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                   http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.0.xsd">
+
+	<changeSet id="ppl_tipo_producto_ct_003" author="Monica Espinola">
+		<createTable tableName="tipo_producto" schemaName="data">
+
+			<column name="id_tipo_producto" type="BIGINT" autoIncrement="true">
+				<constraints nullable="false" primaryKey="true"/>
+			</column>
+
+			<column name="nombre_tipo" type="VARCHAR" >
+				<constraints nullable="false"/>
+			</column>
+
+	      <column name="fecha_alta" type="DATE" >
+				<constraints nullable="false"/>
+		  </column>
+	
+	      <column name="fecha_baja" type="DATE" >
+				<constraints nullable="true"/>
+		  </column>		
+
+		</createTable>
+	</changeSet>
+
+</databaseChangeLog>
