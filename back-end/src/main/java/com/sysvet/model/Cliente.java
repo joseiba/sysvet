@@ -14,8 +14,12 @@ public class Cliente implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id_cliente")
+	private Long id_cliente;
+	
+	
 	@Column(name = "ci_cliente")
-	private Long cedula;
+	private String cedula;
 	
 	@Column(name ="nombre_cliente")
 	private String nombre_cliente;
@@ -35,25 +39,39 @@ public class Cliente implements Serializable{
 	@Column(name = "email")
 	private String email;
 	
-	@Column(name = "apellido_cliente")
+	@Column(name = "ciudad")
 	private String ciudad;
 	
 	public Cliente() {}
 	
 	// metodo que regresa un tipo de cliente
-	public Cliente(Long cedula, String nombre_cliente, String apellido_cliente) {
+	public Cliente(Long id_cliente, String cedula, String nombre_cliente, String apellido_cliente, String direccion,
+			String ruc, String celular, String email, String ciudad) {
+		super();
+		this.id_cliente = id_cliente;
 		this.cedula = cedula;
 		this.nombre_cliente = nombre_cliente;
 		this.apellido_cliente = apellido_cliente;
-		
+		this.direccion = direccion;
+		this.ruc = ruc;
+		this.celular = celular;
+		this.email = email;
+		this.ciudad = ciudad;
 	}
 
-	
-	public Long getCedula() {
+	public Long getId_cliente() {
+		return id_cliente;
+	}
+
+	public void setId_cliente(Long id_cliente) {
+		this.id_cliente = id_cliente;
+	}
+
+	public String getCedula() {
 		return cedula;
 	}
 
-	public void setCedula(Long cedula) {
+	public void setCedula(String cedula) {
 		this.cedula = cedula;
 	}
 
@@ -113,4 +131,5 @@ public class Cliente implements Serializable{
 		this.ciudad = ciudad;
 	}
 
+	
 }

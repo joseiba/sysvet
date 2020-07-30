@@ -42,7 +42,7 @@ public class Mascota implements Serializable {
 	private String raza;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_cliente", referencedColumnName = "ci_cliente")
+	@JoinColumn(name = "id_cliente", referencedColumnName = "id_cliente")
 	private Cliente cliente;
 	
 	// Completar este metodo
