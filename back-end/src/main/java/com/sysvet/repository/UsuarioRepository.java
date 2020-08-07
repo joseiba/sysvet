@@ -33,8 +33,8 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	 * 
 	 */
 	
-	Page<Usuario> findAllByNameContainsOrLastnameContainsOrEmailContains(String nombre, String apellido,
-            															String email, Pageable pageable);
+	//Page<Usuario> findAllByNameContainsOrLastnameContainsOrEmailContains(String nombre, String apellido,
+    //        															String email, Pageable pageable);
 	
 	
 	/**
@@ -43,7 +43,7 @@ public interface UsuarioRepository extends JpaRepository<Usuario, Long>{
 	 * @return {@link Page <Usuario>}
 	 */
 	
-    @Query("select p from User p where concat(nombre,' ',apellido) like %:filtro% or email like %:filtro% or rol like %:filtro%")
+	@Query("select p from Usuario p where concat(nombre,' ',apellido) like %:filtro% or email like %:filtro% or rol like %:filtro%")
     Page<Usuario> findAllByNameContainsOrLastnameContains(@Param("filtro") String nombre, Pageable pageable);
 
 }
